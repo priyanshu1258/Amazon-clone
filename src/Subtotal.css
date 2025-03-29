@@ -1,0 +1,34 @@
+.subtotal{
+    display: flex;
+    flex-direction: column; /* Arrange items in a column */
+    justify-content: space-between; /* Space items evenly */
+    padding: 20px; /* Add padding inside the subtotal section */
+    width: 300px;
+    height: 100px; /* Set a fixed height for the subtotal section */
+    border-radius: 3px; /* Rounded corners */
+    border: 1px solid #dddddd; /* Light gray border */
+    background-color: #f3f3f3; /* White background for the subtotal section */
+}
+.subtotal button{
+    background-color: #cd9042; /* Brown color */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding for the button */
+    border-radius: 3px; /* Rounded corners for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.4s ease; /* Smooth transition for background color */
+    width: 100%; /* Full width button */
+    text-align: center; /* Center text in button */
+}
+.subtotal button:hover{
+    background-color: #9b722f; /* Darker brown on hover */
+}
+.subtotal__gift{
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 20px; /* Space below the gift option */
+}
+.subtotal__gift input{
+    margin-right: 5px; /* Space between checkbox and label */
+}
