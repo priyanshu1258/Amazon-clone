@@ -2,21 +2,25 @@
     display: flex; /* Arrange the left and right sections side by side */
     padding: 20px;
     background-color: #f3f3f3;
-    height: 100vh; /* Full viewport height */
+    height: auto; /* Allow the height to adjust based on content */
 }
 
 .checkout__left {
     flex: 0.7; /* Take up 70% of the width */
-    margin-right: 10px; /* Add spacing between the left and right sections */
+    margin-right: 20px; /* Add spacing between the left and right sections */
     background-color: white; /* Add a white background for the left section */
     padding: 20px; /* Add padding inside the left section */
+    border-radius: 10px; /* Add rounded corners */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    overflow: hidden; /* Prevent content from overflowing */
 }
+
 .checkout__right {
     flex: 0.3; /* Take up 30% of the width */
     background-color: white;
     padding: 20px;
     border: 1px solid #ddd;
+    border-radius: 10px;
     height: fit-content; /* Adjust height to fit the content */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
@@ -24,15 +28,15 @@
 .checkout__ad {
     width: 100%; /* Ensure the ad image fits within the container */
     margin-bottom: 10px;
-    height: 125px;
-    object-fit: cover; /* Ensure the image is not distorted */
+    height: auto;
+    object-fit: contain; /* Ensure the image is not distorted */
 }
 
 .checkout__title {
-    margin: 0; /* Remove extra margin */
-    padding: 10px 0; /* Add vertical padding */
-    border-bottom: 1px solid lightgray; /* Add a bottom border */
     font-size: 24px;
     font-weight: 800;
+    margin-bottom: 20px; /* Add spacing below the title */
+    border-bottom: 1px solid lightgray; /* Add a bottom border for separation */
+    padding-bottom: 10px; /* Add padding below the title */
 }
 

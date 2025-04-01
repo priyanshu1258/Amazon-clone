@@ -34,13 +34,13 @@ function Home() {
          {/* Second row with three products */}
          <div className='home__row'>
            <Product 
-             title="Amazon Echo (3rd generation)" 
+             title="Amazon Echo (3rd generation)Amazon Echo, often shortened to Echo, is a brand of smart speakers developed by Amazon. " 
              price={98.99} 
              image="https://m.media-amazon.com/images/I/61Gob-M3snL._AC_SL1000_.jpg" 
              rating={5} 
            />
            <Product 
-             title="Pruning Shears" 
+             title="Pruning Shears:Handheld blades designed for cutting plants." 
              price={499.99} 
              image="https://th.bing.com/th/id/OIP.O-garg9f2YJKo8r2P6pZDAHaHa?rs=1&pid=ImgDetMain" 
              rating={4} 

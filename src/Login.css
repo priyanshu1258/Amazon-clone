@@ -1,0 +1,18 @@
+.login {
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: left; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    height: 100vh; /* Full viewport height */
+    background-color: #f3f3f3; /* Optional: Add a background color */
+}
+
+.login__logo {
+    margin-bottom: 20px; /* Space below the logo */
+    margin-top: 20px; /* Space above the logo */
+    width: 100%; /* Make the logo responsive */
+    object-fit: contain; /* Ensure the image is not distorted */
+    margin-right: auto; /* Align to the left */
+    margin-left: auto; /* Align to the left */
+    
+}

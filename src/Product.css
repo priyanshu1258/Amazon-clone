@@ -11,6 +11,8 @@
     z-index: 1;
     border-radius: 10px; /* Add rounded corners */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    font-weight: 700;
+    font-size: 14px; /* Set a base font size for the product text */
 }
 
 .product__info {
