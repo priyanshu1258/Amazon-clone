@@ -1,18 +1,138 @@
 .login {
     display: flex; /* Enable flexbox */
     flex-direction: column; /* Stack items vertically */
-    justify-content: left; /* Center items vertically */
     align-items: center; /* Center items horizontally */
     height: 100vh; /* Full viewport height */
-    background-color: #f3f3f3; /* Optional: Add a background color */
+    background: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab); /* Gradient background */
+    background-size: 300% 300%; /* Size of the gradient */
+    animation: gradientMove 7s ease infinite; /* Animation for the gradient */
 }
 
+
 .login__logo {
-    margin-bottom: 20px; /* Space below the logo */
-    margin-top: 20px; /* Space above the logo */
-    width: 100%; /* Make the logo responsive */
+    display: flex; /* Enable flexbox for the logo */
+    max-width: 200px; /* Set a maximum width for the logo */
+    height: auto;
+    width: auto; /* Maintain aspect ratio */
     object-fit: contain; /* Ensure the image is not distorted */
-    margin-right: auto; /* Align to the left */
-    margin-left: auto; /* Align to the left */
+    margin-bottom: 15px; /* Add spacing below the logo */
+    margin: 0 20px;
+}
+
+.login__container {
+    display: flex; /* Enable flexbox for the container */
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+    background-color: white; /* White background for the container */
+    padding: 30px; /* Padding inside the container */
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0 2cqb 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 350px; /* Fixed width for the container */
+}
+
+.login__signInButton{
+    background-color: #e9b545; /* Brown color */
+    padding: 2.5px; /* Padding inside the button */
+    color:black; /* White text */
+    border: none; /* No border */
+    border-radius: 2px; /* Rounded corners */
+    font-weight: bold;
+    transition: background-color 0.4s ease; /* Smooth transition for hover effect */
+    width: 100%; /* Full width button */
+    text-align: center; /* Center-align the button text */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 10px; /* Spacing above the button */
     
 }
+
+.login__signInButton:hover {
+    background-color: #9b722f; /* Darker brown on hover */
+}
+
+.login__registerButton{
+    background-color: #e9b545; /* Brown color */
+    padding: 2.5px; /* Padding inside the button */
+    color: black; /* White text */
+    border: none; /* No border */
+    border-radius: 2px; /* Rounded corners */
+    font-weight: bold;
+    transition: background-color 0.4s ease; /* Smooth transition for hover effect */
+    width: 100%; /* Full width button */
+    text-align: center; /* Center-align the button text */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 10px; /* Spacing above the button */
+    margin-bottom: 10px; /* Spacing below the button */
+    margin-right: 25px; /* Spacing to the right of the button */
+
+}
+.login__registerButton:hover {
+    background-color: #9b722f; /* Darker brown on hover */
+}
+
+
+    
+    
+    
+
+.login__container > p{
+    margin-top: 15px; /* Spacing above the text */
+    font-size: 12px; /* Smaller font size */
+}
+
+.login__container > h1 {
+    font-weight: 500;
+    margin-bottom: 20px; /* Spacing below the heading */
+    text-align: left;
+   width: 100%; /* Take full width of the container */
+    margin-right: 150px; /* Spacing to the right of the heading */
+}
+
+
+
+.login__container > form {
+    display: flex; /* Enable flexbox for the form */
+    flex-direction: column; /* Stack form elements vertically */
+    width: 100%; /* Take full width of the container */
+}
+
+.login__container > form > h5 {
+    margin-bottom: 5px; /* Add spacing below the label */
+    font-size: 14px; /* Adjust font size */
+    font-weight: 600; /* Normal font weight */
+    text-align: left; /* Align text to the left */
+    height: 20px; /* Fixed height for the text */
+    background-color:white;
+    width: 100%; /* Take full width of the container */
+}
+
+.login__container > form > input {
+    height: 30px; /* Set height for input fields */
+    margin-bottom: 15px; /* Add spacing below the input field */
+    padding: 5px; /* Add padding inside the input field */
+    border: 1px solid lightgray; /* Add a light gray border */
+    border-radius: 3px; /* Rounded corners for input fields */
+    width: 100%; /* Take full width of the container */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+.login__container > form > button {
+    margin-top: 10px; /* Add spacing above the button */
+}
+
+
+@keyframes appear  {
+    from {
+      opacity: 0;
+      clip-path: inset(100% 100% 0 0);
+    }
+    to {
+      opacity: 1;
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  .login__container{
+    Animation : appear  0.8s ease-in-out;
+    Animation-timeline:login() ;
+    animation-range: entry 0%  cover 40%;
+  }

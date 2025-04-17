@@ -19,6 +19,7 @@
     border-radius: 3px; /* Rounded corners */
     color:#111; /* Dark text color */
     transition: background-color 0.3s ease; /* Smooth hover effect */
+    
 }
 
 .checkoutProduct__info > button:hover {

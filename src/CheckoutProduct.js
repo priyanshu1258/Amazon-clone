@@ -1,8 +1,11 @@
 import React from 'react';
 import './CheckoutProduct.css'
 import { useStateValue } from "./StateProvider";
+import { ListItem } from '@mui/material';
+import Payment from './Payment';
 
 function CheckoutProduct({ id, image, title, price, rating, hideButton }) {
+    console.log("CheckoutProduct id:", id);
     const [{ basket }, dispatch] = useStateValue();
 
     const removeFromBasket = () => {
@@ -27,7 +30,7 @@ function CheckoutProduct({ id, image, title, price, rating, hideButton }) {
                     {Array(rating)
                     .fill()
                     .map((_, i) => (
-                        <p>⭐</p>
+                        <p key = {i}>⭐</p>
                     ))}
                 </div>
                 {!hideButton && (
@@ -39,4 +42,8 @@ function CheckoutProduct({ id, image, title, price, rating, hideButton }) {
 }
 
 export default CheckoutProduct
+
+
+
+
 

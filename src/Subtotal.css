@@ -22,7 +22,9 @@
     text-align: center; /* Center text in button */
 }
 .subtotal button:hover{
-    background-color: #9b722f; /* Darker brown on hover */
+    background: linear-gradient(45deg, #230105, #7462ff, #f48e21, #23d5ab); /* Gradient background */
+    background-size: 300% 300%; /* Size of the gradient */
+    animation: gradientMove 5s ease infinite; /* Animation for the gradient */ /* Darker brown on hover */
 }
 .subtotal__gift{
     display: flex; /* Flexbox for alignment */

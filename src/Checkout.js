@@ -5,7 +5,7 @@ import CheckoutProduct from './CheckoutProduct';
 import { useStateValue } from './StateProvider'; // Assuming you have a StateProvider for global state management
 
 function Checkout() {
-    const [{ basket },dispatch] = useStateValue(); // Assuming you have a useStateValue hook to get the basket state
+    const [{ basket,user },dispatch] = useStateValue(); // Assuming you have a useStateValue hook to get the basket state
 
   return (
     <div className="checkout">
@@ -16,6 +16,7 @@ function Checkout() {
             alt=""
             />
             <div>
+                <h3>Hello, {user?.email}</h3>
             <h2 className="checkout__title">YourShopping Basket</h2>
             {basket.map(item => (
                 <CheckoutProduct

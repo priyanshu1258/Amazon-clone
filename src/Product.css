@@ -13,6 +13,7 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
     font-weight: 700;
     font-size: 14px; /* Set a base font size for the product text */
+    
 }
 
 .product__info {
@@ -51,6 +52,9 @@
 }
 
 .product button:hover {
-    background-color: #9b722f; /* Darker brown on hover */
+    background: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab); /* Gradient background */
+    background-size: 300% 300%; /* Size of the gradient */
+    animation: gradientMove 5s ease infinite; /* Animation for the gradient */ /* Darker brown on hover */
+    
 }
 

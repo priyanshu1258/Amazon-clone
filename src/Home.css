@@ -8,21 +8,43 @@ body, html {
     display: flex;
     flex-direction: column; /* Stack elements vertically */
     justify-content: center;
-    margin: 0 auto; /* Center the home container */
+    margin: 0 5px; /* Center the home container */
     max-width: 1500px;
+    position: relative;
 }
 .home__row {
     display: flex; /* Arrange products in a horizontal row */
     justify-content: center; /* Center the products in the row */
-    margin: 20px 0; /* Add vertical spacing between rows */
-    gap: 20px; /* Add consistent spacing between products */
+    z-index: 1;
+    width: 100%; /* Full width of the container */
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0 5px; /* Add padding to the left and right */
+    opacity: 0;
+    transform: translateY(50px); /* Start slightly below */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Smooth transition */
+    
 }
 
 .home__container {
     position: relative; /* Ensure the container is positioned relative to the home image */
     max-width: 1500px; /* Limit the width of the container */
-    margin: 0 auto; /* Center the container */
+    margin: 0 20px; /* Center the container */
     padding: 0; /* Remove any padding */
+    width: auto; /* Set a fixed width for the container */
+
+    
+}
+@keyframes gradientMove {
+  0% {
+      background-position: 0% 50%; /* Start position */
+  }
+  50% {
+      background-position: 100% 50%; /* Middle position */
+  }
+  100% {
+      background-position: 0% 50%; /* End position */
+  }
 }
 
 .home__image {
@@ -31,21 +53,51 @@ body, html {
     mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
     mask-size: 100%;
     mask-repeat: no-repeat;
-    height: 100vh; /* Full viewport height */
+    height: auto; /* Full viewport height */
     object-fit: cover; /* Ensure the image covers the container */
     margin: 0; /* Remove any margin */
     padding: 0; /* Remove any padding */
+    
 }
 
-.home__row::-webkit-scrollbar {
-    height: 8px; /* Adjust scrollbar height for horizontal scrolling */
+.home__rowsContainer {
+    position: relative; /* Position the rows container relative to the home container */
+    margin-top: -20%; /* Start the rows from the middle of the image */
+    width: 100%; /* Ensure the rows container spans the full width */
+    display: flex;
+    flex-direction: column; /* Stack rows vertically */
+    gap: 10px; /* Add spacing between rows */
+    padding: 0 10px; /* Add padding to the left and right */
+    
+    
 }
 
-.home__row::-webkit-scrollbar-thumb {
-    background-color: #cd9042; /* Style the scrollbar thumb */
-    border-radius: 10px;
+@keyframes appear  {
+    from {
+      opacity: 0;
+      clip-path: inset(100% 100% 0 0);
+    }
+    to {
+      opacity: 1;
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  .home__row{
+    Animation : appear  0.8s ease-in-out;
+    Animation-timeline:home__rowsContainer() ;
+    animation-range: entry 0%  cover 40%;
+  }
+
+/* Visible state for rows */
+.home__row--visible {
+  opacity: 1;
+  transform: translateY(0); /* Move to the original position */
 }
 
-.home__row::-webkit-scrollbar-track {
-    background-color: #f1f1f1; /* Style the scrollbar track */
+.home__row  :hover{
+    transform: scale(1.05); /* Slightly enlarge the product on hover */
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+    z-index: 2; /* Bring the hovered product to the front */
 }
+

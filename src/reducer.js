@@ -23,25 +23,19 @@ export const initialState = {
         }
   
       case "REMOVE_FROM_BASKET":
-        // Create a copy of the basket
-        const newBasket = [...state.basket];
-
-        // Find the index of the item to remove
-        const index = state.basket.findIndex(
-            (basketItem) => basketItem.id === action.id
-        );
-
+        console.log("REMOVE_FROM_BASKET action:", action);
+        const index = state.basket.findIndex((basketitem) => basketitem.id === action.id);
+        let newBasket = [...state.basket];
+    
         if (index >= 0) {
-            // Remove the item at the found index
-            newBasket.splice(index, 1);
+          console.log("Item found. Removing item:", state.basket[index]);
+          newBasket.splice(index, 1); // Remove the item at the found index
         } else {
-            console.warn(
-                `Can't remove product (id: ${action.id}) as it's not in the basket!`
-            );
+          console.warn(`Can't remove product (id: ${action.id}) as it's not in the basket!`);
         }
 
         console.log("Updated basket:", newBasket);
-
+    
         return {
             ...state,
             basket: newBasket,
