@@ -1,0 +1,42 @@
+.checkoutProduct {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.checkoutProduct__info {
+    padding-left: 20px
+}
+
+.checkoutProduct__info > button {
+    background: #f0c14b; /* Same background color as other buttons */
+    border: 0px solid; /* Add a border for consistency */
+    border-color: #a88734 #9c7e31 #846a29; /* Match the border colors */
+    padding: 5px 10px; /* Add padding for a consistent size */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-weight: 600; /* Bold text */
+    margin-top: 10px; /* Add spacing above the button */
+    border-radius: 3px; /* Rounded corners */
+    color:#111; /* Dark text color */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    
+}
+
+.checkoutProduct__info > button:hover {
+    background: #ddb347; /* Slightly darker background on hover */
+}
+
+.checkoutProduct__image {
+    object-fit: contain;
+    width: 180px;
+    height: 180px;
+  }
+
+.checkoutProduct__rating {
+    display: flex;
+  }
+
+.checkoutProduct__title {
+    font-size: 17px;
+    font-weight: 800;
+}
